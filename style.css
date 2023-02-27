@@ -12,7 +12,7 @@
 body {
     min-height: 100vh;
     margin: 0 auto;
-    background-color: var(--neutral-grayishBlue);
+    background-color: var(--neutral-lightGray);
     display: grid;
     place-items: center;
 }
@@ -21,7 +21,6 @@ main {
     font-family: 'Karla', sans-serif;
     width: 80%;
     max-width: 768px;
-    background-color: var(--neutral-lightGray);
     border-radius: 0.5rem;
     box-shadow: 0.5rem 0.5rem 1rem gray;
 }
@@ -40,6 +39,7 @@ main {
         .joinCommunity p{
             font-weight: 200;
             line-height: 1.5rem;
+            color: var(--neutral-grayishBlue);
         }
 
     .subscription {
