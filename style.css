@@ -1,4 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla');
 
+:root {
+    --primary-cyan: hsl(179, 62%, 43%);
+    --primary-brightYellow: hsl(71, 73%, 54%);
+    --primary-lightCyan: #4abebd;
+
+    --neutral-lightGray: hsl(204, 43%, 93%);
+    --neutral-grayishBlue: hsl(218, 22%, 67%);
+}
+
+body {
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: var(--neutral-grayishBlue);
+    display: grid;
+    place-items: center;
+}
+
+main {
+    font-family: 'Karla', sans-serif;
+    width: 80%;
+    max-width: 768px;
+    background-color: var(--neutral-lightGray);
+    border-radius: 0.5rem;
+    box-shadow: 0.5rem 0.5rem 1rem gray;
+}
+
+    .joinCommunity {
+        padding: 2rem;
+        height: calc(50% - 4rem);
+    }
+        .joinCommunity h1{
+            margin-block-start: 0;
+            color: var(--primary-cyan);
+        }
+        .joinCommunity h2{
+            color: var(--primary-brightYellow);
+        }
+        .joinCommunity p{
+            font-weight: 200;
+        }
+
+    .subscription {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        height: 50%;
+        color: var(--neutral-lightGray);
+    }
+        .monthlySubscription {
+            padding: 2rem;
+            background-color: var(--primary-cyan);
+            border-radius: 0 0 0 0.5rem;
+        }
+            .monthlySubscription h2{
+                margin-block-start: 0;
+            }
+            .monthlySubscription button{
+                width: 100%;
+                padding: 1rem;
+                border-width: 0;
+                font-weight: 700;
+                font-family: 'Karla', sans-serif;
+                border-radius: 0.5rem;
+                color: var(--neutral-lightGray);
+                font-size: 1.25rem;
+                box-shadow: 0.5rem 0.5rem 1rem #3b9f73;
+                background-color: var(--primary-brightYellow);
+            }
+
+            .monthlySubscription button:hover{
+                cursor: pointer;
+                filter: contrast(1.2);
+            }
+            .monthlySubscription h1{
+                margin-block-end: 0.5rem;
+                display: flex;
+                align-items: center;
+            }
+                .monthlySubscription h1 small{
+                    font-size: 1rem;
+                    font-weight: 200;
+                    transform: translate(20%);
+                }
+            .monthlySubscription p{
+                margin-block-start: 0;
+                margin-block-end: 2rem;
+            }
+
+        .reasons {
+            padding: 2rem;
+            background-color: var(--primary-lightCyan);
+            border-radius: 0 0 0.5rem 0;
+        }
+            .reasons h2 {
+                margin-block-start: 0;
+            }
+
+            .reasons ul {
+                padding: 0;
+                list-style-type: none;
+            }
+                .reasons ul li{
+                    font-weight: 200;
+                    margin-block-end: 0.5rem;
+                }
+
+footer {
+    position: fixed;
+    bottom: 1vh;
+}
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (max-aspect-ratio: 1 / 1) and (max-width: 767px) {
+    main {
+        margin-block: 5vh;
+    }
+    .subscription {
+        grid-template-columns: auto;
+    }
+        .monthlySubscription {
+            border-radius: 0;
+        }
+        .monthlySubscription button {
+            font-size: 1rem;
+        }
+        .reasons {
+            border-radius: 0 0 0.5rem 0.5rem;
+        }
+
+    footer {
+        position: static;
+    }
+}
